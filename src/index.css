@@ -1,12 +1,47 @@
+@import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
-  line-height: normal;
+}
+
+:root {
+  /* Typography*/
+  --fs-sm: 14px;
+  --fs-md: 18px;
+  --fs-lg: 25px;
+  --color-primary: #4793ff;
+  --color-gray: #939cb0;
+}
+
+body[data-theme="dark"] {
+  --colors-text: #fff;
+  --colors-bg: #0d1117;
+  --colors-bg-big-card: #4f4f4f;
+  --colors-bg-small-card: #2e3035;
+
+  --shadow: rgba(180, 180, 180, 0.3) 2px 5px 25px -3px;
+}
+
+body[data-theme="light"] {
+  --colors-text: #000;
+  --colors-bg: #fff;
+  --colors-bg-big-card: #fff;
+  --colors-bg-small-card: rgba(71, 147, 255, 0.2);
+
+  --shadow: rgba(180, 180, 180, 0.7) 2px 5px 25px -3px;
+}
+
+body {
+  color: var(--colors-text);
+  font-size: var(--fs-sm);
+  background-color: var(--colors-bg);
 }
 
 h1,
@@ -30,30 +65,4 @@ h6 {
 }
 .noSelect:focus {
   outline: none !important;
-}
-
-.container {
-  width: 1440px;
-  margin: 0 auto;
-
-  @media (max-width: 1474px) {
-    max-width: 1160px;
-  }
-
-  @media (max-width: 1200px) {
-    max-width: 960px;
-  }
-
-  @media (max-width: 992px) {
-    max-width: 720px;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 540px;
-  }
-
-  @media (max-width: 576px) {
-    width: 100%;
-    padding: 0 10px;
-  }
 }

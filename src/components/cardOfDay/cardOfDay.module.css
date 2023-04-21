@@ -1,0 +1,42 @@
+.card {
+  padding: 15px;
+  background-color: var(--colors-bg-small-card);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dayName {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+
+.date {
+  font-weight: 400;
+  color: var(--color-gray);
+  font-size: var(--fs-sm);
+  margin-top: 7px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-top: 14px;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.temp {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.description {
+  margin-top: 14px;
+  color: var(--color-gray);
+  font-size: 13px;
+}
