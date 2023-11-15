@@ -137,12 +137,12 @@ export const useWeatherService = () => {
     let currentWeatherObj = {};
     data.forEach((item, i) => {
       const obj = {};
-      obj.temp = Math.round(item.main.temp) || '?';
-      obj.feelsLike = Math.round(item.main.feels_like) || '?';
+      obj.temp = Math.round(item.main.temp) ?? '?';
+      obj.feelsLike = Math.round(item.main.feels_like) ?? '?';
       obj.city = city || '?';
-      obj.humidity = item.main.humidity || '?';
+      obj.humidity = item.main.humidity ?? '?';
       obj.description = item.weather[0].description || '?';
-      obj.windSpeed = Math.round(item.wind.speed) || '?';
+      obj.windSpeed = Math.round(item.wind.speed) ?? '?';
       obj.windOrientation = _getWindOrientation(item.wind.deg);
       obj.day = _getDayAndMonth(item.dt_txt).day;
       obj.fullDay = _getDayAndMonth(item.dt_txt).fullDay;
